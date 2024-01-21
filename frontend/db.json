@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "email": "phanalvin2@gmail.com",
+      "password": "admin",
+      "name": "Alvin Phan",
+      "user_id": "phanalvin2",
+      "error": ""
+    }
+  ],
+  "club": [
+    {
+      "user_id": "phanalvin2",
+      "filter": "",
+      "club_list": [
+        {
+          "club_id": "cs187",
+          "boardCode": "AAAAAm",
+          "club_name": "Computer Science 187",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "board_members": [
+            "phanalvin2",
+            "avlaniShalin1"
+          ],
+          "general_members": [
+            "alvin'sMom",
+            "someDudeAvlaniMetDownTheStreet"
+          ]
+        }
+      ],
+      "error": ""
+    }
+  ],
+  "event": [
+    {
+      "user_id": "phanalvin2",
+      "club_id": "cs187",
+      "filter": "",
+      "limit": "",
+      "event_list": [
+        {
+          "event_id": "csBBQ7",
+          "title": "Comp. Sci. Big Ol' Barbeque",
+          "description": "Come barbeque with Alvin's mom!",
+          "event_capacity": 15,
+          "num_attending": 3,
+          "club_id": "cs187",
+          "planned_date": "2022-02-06T14:00:00",
+          "date_generated": "2021-12-2T19:53:21",
+          "people_involved": [
+            "phanalvin2",
+            "alvin'sMom",
+            "someDudeAvlaniMetDownTheStreet"
+          ]
+        }
+      ],
+      "error": ""
+    }
+  ],
+  "announcement": [
+    {
+      "user_id": "phanalvin2",
+      "club_id": "cs187",
+      "filter": "",
+      "limit": "",
+      "announcements_list": [
+        {
+          "announcement_id": "whoseFish?",
+          "title": "Who ordered the fish and chips?",
+          "description": "One of you asked me to order some fish and chips for ya. Confess.",
+          "date_generated": "2021-12-2T19:59:03",
+          "club_id": "cs187"
+        }
+      ],
+      "error": ""
+    }
+  ]
+}

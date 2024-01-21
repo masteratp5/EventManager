@@ -1,0 +1,56 @@
+Endpoints JSON Request/Response
+
+$/announcement GET [Get Announcements]
+Request (query string parameters): {“user_id”: _ (string), “club_id”: _ (string), “filter”: _ (string, optional), “limit”: _ (string int, optional)}
+Response: {“announcements_list”: [] (Announcement), “error”: _ (string)}
+
+$/announcement POST [Create Announcement]
+Request: {“user_id”: _ (string), “club_id”: _ (string), “title”: _ (string), “description”: _ (string)}
+Response: {“announcement_id”: _ (string), “error”: _ (string)}
+
+$/club GET [Get Clubs]
+Request (query string parameters): {“user_id”: _ (string), “filter”: _ (string, optional)}
+Response: {“club_list”: [] (Club), “error”: _ (string)}
+
+$/club POST [Create Club]
+Request: {“user_id”: _ (string), “club_name”: _ (string), “board_code”: _ (string), “description”: _ (string)}
+Response: {“club_id”: _ (string), “error”: _ (string)}
+
+$/clubmembers POST [Join Club]
+Request: {“user_id”: _ (string), “club_id”: _ (string)}
+Response: {“joined_club”: - (boolean), “error”: _ (string)}
+
+$/clubmembers PUT [Promote General Member]
+Request: {“user_id”: _ (string), “club_id”: _ (string), “board_code”: _ (string)}
+Response: {“was_promoted”: _ (boolean), “error”: _ (string)}
+
+$/event GET [Get Events]
+Request (query string parameters): {“user_id”: _ (string), “club_id”: _ (string), “filter”: _ (string, optional), “limit”: _ (string int, optional)}
+Response: {“event_list”: [] (Event), “error”: _ (string)}
+
+$/event PUT [Mark Event Interest]
+Request: {“user_id”: _ (string), “club_id”: _ (string), “event_id”: _ (string)}
+Response: {“added”: _ (boolean), “removed”: _ (boolean), “error”: _ (string)}
+
+$/event POST [Create Event]
+Request: {“user_id”: _ (string), “club_id”: _ (string), “title”: _ (string), “description”: _ (string), “event_capacity”: _ (uint32), “planned_date”: _ (string, format “2006-01-02T15:04:05”)}
+Response: {“event_id”: _ (string), “error”: _ (string)}
+
+$/users GET [Sign In]
+Request: {“email”: _ (string), “password”: _ (string)}
+Response: {“user_id”: _ (string), “error”: _ (string)}
+
+$/users POST [Sign Up]
+Request: {“first_name”: _ (string), “last_name”: _ (string), “email”: _ (string), “password”: _ (string)}
+Response: {“success”: _ (boolean), “error”: _ (string)}
+
+———————
+
+Club
+{“club_id”: _ (string or byte), “board_code”: _ (string), “club_name”: _ (string), “description”: _ (string), “board_members”: [](string or byte), “general_members”: [] (string or byte)}
+
+Announcement
+{“announcement_id”: _ (string or byte), “title”: _ (string), “description”: _ (string), “date_generated”: _ (byte), “club_id”: _ (string or byte)}
+
+Event
+{“event_id”: _ (string or byte), “title”: _ (string), “description”: _ (string), “event_capacity”: _ (uint32), “num_attending”: _ (uint32), “club_id”: _ (string or byte), “planned_date”: _ (byte), “date_generated”: _ (byte), “people_involved”: [] (string or byte)
